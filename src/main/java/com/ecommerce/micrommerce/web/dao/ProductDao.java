@@ -1,6 +1,6 @@
 package com.ecommerce.micrommerce.web.dao;
 
-import com.ecommerce.micrommerce.web.model.Product;
+import com.ecommerce.micrommerce.model.Product;
 
 import java.util.List;
 
