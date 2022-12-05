@@ -3,14 +3,23 @@ package com.ecommerce.micrommerce.model;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
+
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 //@JsonIgnoreProperties(value = {"prixAchat", "id"})  // permet de filtrer ce qui ressort dans le JSON de sortie
 
 @JsonFilter("monFiltreDynamique")
 
+@Entity
 public class Product {
+    @Id
     private int id;
+    @Size(min = 3, max = 25)
     private String nom;
+    @Min(value = 1)
     private int prix;
     private int prixAchat;
 
